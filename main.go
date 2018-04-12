@@ -103,7 +103,7 @@ func main() {
 	router.HandleFunc("/health", handleHealth).
 		Methods("GET")
 
-	router.HandleFunc("/{bucket:[0-9a-zA-Z-_]+}/{object:.*}", handleProxy).
+	router.HandleFunc("/{bucket:[0-9a-zA-Z-_.]+}/{object:.*}", handleProxy).
 		Methods("GET", "HEAD")
 
 	log.Printf("[service] listening on %s", *bind)
