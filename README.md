@@ -17,6 +17,9 @@ docker run --rm -d -p 8080 \
     --network syncaide --ip 172.20.0.2 \
     -v ~/.config/gcloud:/root/.config/gcloud \
     gcr.io/${PROJECT}/revgcs:latest revgcs --bind 0.0.0.0:8080
+    
+helm repo add syncaide http://172.20.0.2:8080/static.syncaide.com/charts
 ```
 > It is without say that you need to ensure all the necessary tooling 
-application like `gcloud`, `docker`, etc. are install and configured.
+application like `gcloud`, `docker`, `kubectl`, `helm`, etc. are installed 
+and configured.
