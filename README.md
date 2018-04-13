@@ -1,9 +1,16 @@
 ### Build and Push Container
 ```bash
 gcloud auth login
-PROJECT=syncaide-200904
+
 VERSION=latest
+PROJECT=syncaide-200904
 docker build -t gcr.io/${PROJECT}/revgcs:${VERSION} .
+```
+
+### Pull Container
+```bash
+VERSION=latest
+PROJECT=syncaide-200904
 docker push gcr.io/${PROJECT}/revgcs:${VERSION}
 ```
 
