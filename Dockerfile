@@ -14,6 +14,8 @@ RUN set -ex \
 RUN go install $pkg/...
 
 FROM alpine
+RUN set -ex \
+      && apk add --no-cache ca-certificates
 
 COPY --from=build-env /go/bin/revgcs /usr/bin/
 
