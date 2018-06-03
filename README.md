@@ -1,5 +1,5 @@
 It is without say that you need to ensure all the necessary tooling 
-application like `gcloud`, `docker`, `kubectl`, `helm`, etc. are installed 
+application like `gcloud`, `docker`, `helm`, etc. are installed 
 and configured.
 
 ### Build and push docker image
